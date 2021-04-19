@@ -7,43 +7,16 @@
   <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
   <body style="margin : 0px; overflow: hidden;">
     <a-scene embedded arjs>
-      <a-marker type="pattern" preset="custom" url="/virtual_installation/pattern-marker.patt">          
-  <!-- ORIGINAL
-        <a-entity
-          position="0.8 -1.2 1"
-          scale="0.01 0.01 0.01"
-          rotation="-90 0 0"
-          gltf-model="/virtual_installation/heartTransformAnimation.glb"
-        ></a-entity> -->
-        
-        <!-- DID NOT WORK        
-        <a-gltf-model src="/virtual_installation/heartTransformAnimation.glb" position="0.8 -1.2 1" rotation="-90 0 0" scale="0.01 0.01 0.01" animation-mixer="loop:once"> </a-gltf-model>
-        -->
-        
+      <a-marker type="pattern" preset="custom" url="/virtual_installation/pattern-marker.patt">
         <a-entity 
-          position="0.8 -1.2 1"
-          scale="0.01 0.01 0.01"
+          position="0 -1.2 0"
+          scale="0.04 0.04 0.04"
           rotation="-90 0 0"
           gltf-model="/virtual_installation/heartTransformAnimation.glb" 
           animation-mixer
         ></a-entity>
-        
-        
-<!--         NEW EXAMPLE
-        <a-entity gltf-model="#monster" animation-mixer></a-entity> -->
-        
       </a-marker>
       <a-entity camera></a-entity>
     </a-scene>
   </body>
 </html>
-
-
-
-<!--NOTES
-I actually figured it out.
-It must've been playing the animation before I used the marker.
-I realized you do not have to specify a clip name, and I changed loop to repeat.
-Additionally I had to include aframe-extras-loaders.min.js 
-<a-gltf-model src="https://3ckid.com/01/assets/mech_drone/scene.gltf" position="0 2 0.25" rotation="90 180 0" scale="0.01 0.01 0.01" animation-mixer="clip: Take 001; loop:once"> </a-gltf-model>
--->
