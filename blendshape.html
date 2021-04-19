@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  <!-- arjs version with marker support -->
+  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+  <!--   source: https://github.com/n5ro/aframe-extras -->
+  <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+  <body style="margin : 0px; overflow: hidden;">
+    <a-scene embedded arjs>
+      <a-marker type="pattern" preset="custom" url="/virtual_installation/pattern-marker.patt">
+        <a-entity 
+          position="0 -1.2 0.5"
+          scale="0.04 0.04 0.04"
+          rotation="-90 0 0"
+          gltf-model="/virtual_installation/heartBshape.glb" 
+          animation-mixer
+        ></a-entity>
+      </a-marker>
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
+</html>
