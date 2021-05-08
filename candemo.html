@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  <!-- we import arjs version without NFT but with marker + location based support -->
+  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+  <script src="/virtual_installation/aframe-gif-shader.js"></script>
+  <body style="margin : 0px; overflow: hidden;">
+    <a-scene embedded arjs>
+      <a-marker type="pattern" preset="custom" url="/virtual_installation/pattern-tracker.patt">
+          <a-box
+            scale='2 2 0'
+            position="0 0 0"
+            rotation="270 0 40"
+            crossorigin
+            material="shader:gif;src:url(/virtual_installation/can.gif);" transparent="true" gif=""
+            >
+           </a-box>                                                                              
+      </a-marker>
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
+</html>
